@@ -41,4 +41,15 @@ typedef struct instruction_s
 void push(stack_t **stack, unsigned int line_number);
 void pall(stack_t **stack, unsigned int line_number);
 
-#endif MONTY_H
+/** headers **/
+
+#include <stdlib.h>
+#include <unistd.h>
+#include <fcntl.h>
+#include <stddef.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <stdio.h>
+#include <string.h>
+
+#endif
