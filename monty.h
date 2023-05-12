@@ -91,14 +91,10 @@ void (*getopcode(char *opcode))(stack_t **, unsigned int);
 	do {\
 	fprintf(stderr, "Error: malloc failed");\
 	exit(EXIT_FAILURE);\
-	} while (0)#define MALLOC_ERROR \
-			   do {\
-	fprintf(stderr, "Error: malloc failed");\
-	exit(EXIT_FAILURE);\
-			   } while (0)
+	} while (0)
 
 #define MALLOC_ERROR1(BUFF) \
-				   do {\
-				   fprintf(stderr, "Error: malloc failed");\
-				   exit(EXIT_FAILURE);\
-				   } while (0)
+        do {\
+        fprintf(stderr, "Error: malloc failed");\
+        exit(EXIT_FAILURE);\
+        } while (0)
