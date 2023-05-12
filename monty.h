@@ -80,3 +80,25 @@ void (*getopcode(char *opcode))(stack_t **, unsigned int);
 	write(STDERR_FILENO, "USAGE: monty file\n", strlen("USAGE: monty file\n"));\
 	exit(EXIT_FAILURE);\
 	} while (0)
+
+#define MALLOC_ERROR \
+	do {\
+	fprintf(stderr, "Error: malloc failed");\
+	exit(EXIT_FAILURE);\
+	} while (0)
+
+#define MALLOC_ERROR1(BUFF) \
+	do {\
+	fprintf(stderr, "Error: malloc failed");\
+	exit(EXIT_FAILURE);\
+	} while (0)#define MALLOC_ERROR \
+			   do {\
+	fprintf(stderr, "Error: malloc failed");\
+	exit(EXIT_FAILURE);\
+			   } while (0)
+
+#define MALLOC_ERROR1(BUFF) \
+				   do {\
+				   fprintf(stderr, "Error: malloc failed");\
+				   exit(EXIT_FAILURE);\
+				   } while (0)
