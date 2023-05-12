@@ -77,6 +77,6 @@ void (*getopcode(char *opcode))(stack_t **, unsigned int);
 
 #define USAGE_ERROR \
 	do {\
-	write(STDERR_FILENO, "USAGE: monty file\n", _strlen("USAGE: monty file\n"));\
+	write(STDERR_FILENO, "USAGE: monty file\n", strlen("USAGE: monty file\n"));\
 	exit(EXIT_FAILURE);\
 	} while (0)
