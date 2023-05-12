@@ -53,3 +53,17 @@ void pall(stack_t **stack, unsigned int line_number);
 #include <string.h>
 
 #endif
+
+/* MACROS */
+#define OPEN_ERROR(FILE) \
+	do {\
+	fprintf(stderr, "Error: Can't open file %s\n", FILE);\
+	exit(EXIT_FAILURE);\
+	} while (0)
+
+#define  INSTRUCTION_ERROR(LINE, INSTRUCTION, STACK) \
+	do {\
+	fprintf(stderr, "L%d: unknown instruction %s\n", LINE, INSTRUCTION);\
+	free_dlistint(STACK);\
+	exit(EXIT_FAILURE);\
+	} while (0)
