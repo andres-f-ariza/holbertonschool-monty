@@ -32,7 +32,7 @@ int main(int argc, char **argv)
 		exec_line = strtok(copied_lines[i - 1], " ");
 		if (!exec_line)
 			continue;
-		handling_function = getopcode_fun(exec_line);
+		handling_function = getopcode(exec_line);
 		if (!handling_function)
 			INSTRUCTION_ERROR(i, exec_line, stack);
 		handling_function(&stack, i);

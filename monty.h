@@ -47,6 +47,7 @@ void initialize_buffer(char *s, int size);
 void initialize_array(char **s, int size);
 void (*getopcode(char *opcode))(stack_t **, unsigned int);
 
+
 /** headers **/
 
 #include <stdlib.h>
@@ -71,5 +72,11 @@ void (*getopcode(char *opcode))(stack_t **, unsigned int);
 	do {\
 	fprintf(stderr, "L%d: unknown instruction %s\n", LINE, INSTRUCTION);\
 	free_dlistint(STACK);\
+	exit(EXIT_FAILURE);\
+	} while (0)
+
+#define USAGE_ERROR \
+	do {\
+	write(STDERR_FILENO, "USAGE: monty file\n", _strlen("USAGE: monty file\n"));\
 	exit(EXIT_FAILURE);\
 	} while (0)

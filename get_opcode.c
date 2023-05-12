@@ -15,7 +15,7 @@ void (*getopcode(char *opcode))(stack_t **, unsigned int)
 	};
 	while (i <= 13)
 	{
-		if (_strcmp(made_opcodes[i].opcode, opcode) == 0)
+		if (strcmp(made_opcodes[i].opcode, opcode) == 0)
 			return (made_opcodes[i].f);
 		i++;
 	}
