@@ -46,7 +46,7 @@ void replace_emptylines(char *buff, char **copy);
 void initialize_buffer(char *s, int size);
 void initialize_array(char **s, int size);
 void (*getopcode(char *opcode))(stack_t **, unsigned int);
-
+void free_dlistint(stack_t *head);
 
 /** headers **/
 
