@@ -24,7 +24,7 @@ void handle(char *file)
 	while (getline(&buff, &read, fl) != -1)
 	{
 		opcode = getopcode();
-		if (opcode = NULL)
+		if (opcode == NULL)
 		{
 			dprintf(STDERR_FILENO, "L%i: unknown instruction %s", line_number, buff);
 			exit(EXIT_FAILURE);
@@ -33,6 +33,5 @@ void handle(char *file)
 		line_number++;
 	}
 	free(buff);
-	free_stack(head);
 	fclose(fl);
 }

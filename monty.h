@@ -10,8 +10,8 @@
  * Description: doubly linked list node structure
  * for stack, queues, LIFO, FIFO
  */
-
-/*Data structures*/
+char *buff;
+/*Data structure*/
 
 typedef struct stack_s
 {
