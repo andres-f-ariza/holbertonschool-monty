@@ -6,7 +6,7 @@
  * Return: Pointer to opcode function
  */
 
-void (*getopcode(char *opcode))(stack_t **, unsigned int)
+void (*getopcode(void))(stack_t **, unsigned int)
 {
 	int i = 0;
 	instruction_t made_opcodes[] = {
@@ -22,5 +22,4 @@ void (*getopcode(char *opcode))(stack_t **, unsigned int)
 			return (made_opcodes[i].f);
 		i++;
 	}
-	return (NULL);
 }
