@@ -43,6 +43,7 @@ void swap(stack_t **stack, unsigned int line_number);
 
 /* Function prototypes */
 
+void handle(char *file);
 void lines_to_array(char *line, char **copy);
 void replace_emptylines(char *buff, char **copy);
 void initialize_buffer(char *s, int size);
