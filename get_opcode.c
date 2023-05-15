@@ -13,6 +13,7 @@ void (*getopcode(char *opcode))(stack_t **, unsigned int)
 		{"push", push},
 		{"pall", pall},
 		{"pint", pint},
+		{"swap", swap},
 	};
 	while (i <= 13)
 	{
