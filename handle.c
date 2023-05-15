@@ -23,7 +23,7 @@ void handle(char *file)
 
 	while (getline(&buff, &read, fl) != -1)
 	{
-		opcode = getopcode(char);
+		opcode = getopcode(buff);
 		if (opcode == NULL)
 		{
 			dprintf(STDERR_FILENO, "L%i: unknown instruction %s", line_number, buff);
