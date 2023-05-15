@@ -48,3 +48,13 @@ void pall(stack_t **stack, __attribute__((unused)) unsigned int line_number)
 		current = current->next;
 	}
 }
+
+void pint(stack_t **stack, unsigned int line)
+{
+	if (!*stack || !stack)
+	{
+		dprintf(STDERR_FILENO, "L%i: can't print, stack empty\n", line_number);
+		exit(EXIT_FAILURE);
+	}
+	printf("%i\n", (*stack)->n)
+}
