@@ -7,7 +7,7 @@ stack_t *stack = NULL;
 
 /* Function implementations */
 
-void op_push(stack_t **stack, unsigned int line_number)
+void push(stack_t **stack, unsigned int line_number)
 {
 	int value_to_add = 0, isint;
 	char *value;
