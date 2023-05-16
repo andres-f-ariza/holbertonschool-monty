@@ -6,45 +6,48 @@
 stack_t *stack = NULL;
 
 /* Function implementations */
-
 void push(stack_t **stack, unsigned int line_number)
 {
-	int value_to_add = 0, isint;
-	char *value;
+	char *arg;
+	int value;
+	stack_t *new_node;
 
-	value = strtok(NULL, " ");
-	isint = string_is_int(value);
-	if (isint == 0)
-	{
-		value_to_add = atoi(value);
-		add_dnodeint(stack, value_to_add);
-	}
-	else
+	arg = strtok(NULL, " \t\n");
+
+	if (!arg)
 	{
 		fprintf(stderr, "L%d: usage: push integer\n", line_number);
-		free_dlistint(*stack);
 		exit(EXIT_FAILURE);
 	}
-}
 
-/**
- * op_pall - pall action for monty
- * @stack: pointer to pointer of head's stack
- * @line_number: file's line number
- */
+	value = atoi(arg);
+	new_node = malloc(sizeof(stack_t));
+	if (!new_node)
+	{
+		fprintf(stderr, "Error: malloc failed\n");
+		exit(EXIT_FAILURE);
+	}
+
+	new_node->n = value;
+	new_node->prev = NULL;
+	new_node->next = *stack;
+
+	if (*stack)
+		(*stack)->prev = new_node;
+
+	*stack = new_node;
+}
 
 void pall(stack_t **stack, __attribute__((unused)) unsigned int line_number)
 {
-	if (stack)
-		print_dlistint(*stack);
+	stack_t *current = *stack;
+
+	while (current)
+	{
+		printf("%d\n", current->n);
+		current = current->next;
+	}
 }
-
-/**
- * op_pint - prints the value at the top of the stack, followed by a new line.
- * @stack: pointer to pointer of head's stack
- * @line_number: file's line number
- */
-
 
 void pint(stack_t **stack, unsigned int line_number)
 {
@@ -59,7 +62,7 @@ void pint(stack_t **stack, unsigned int line_number)
 void swap(stack_t **stack, unsigned int line_number)
 {
 	stack_t *head = *stack, *aux = *stack;
-
+	
 	if(!*stack || !stack || !head->next)
 	{
 		dprintf(STDERR_FILENO, "L%i: can't swap, stack too short\n", line_number);

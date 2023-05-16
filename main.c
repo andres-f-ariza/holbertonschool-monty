@@ -1,6 +1,5 @@
 #include "monty.h"
 
-
 /**
  * main - main function for monty project
  * @argc: argument counter
@@ -11,8 +10,8 @@
 int main(int argc, char **argv)
 {
 	char buff[40000], *line, *copied_lines[4096], *exec_line = NULL;
-	int fd = 0;
-	unsigned int i = 0;
+	int fd;
+	unsigned int i;
 	void (*handling_function)(stack_t **, unsigned int);
 	stack_t *stack = NULL;
 
