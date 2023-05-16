@@ -10,8 +10,8 @@
  * Description: doubly linked list node structure
  * for stack, queues, LIFO, FIFO
  */
-
-/*Data structures*/
+char *buff;
+/*Data structure*/
 
 typedef struct stack_s
 {
@@ -38,9 +38,12 @@ typedef struct instruction_s
 
 void push(stack_t **stack, unsigned int line_number);
 void pall(stack_t **stack, unsigned int line_number);
+void pint(stack_t **stack, unsigned int line_number);
+void swap(stack_t **stack, unsigned int line_number);
 
 /* Function prototypes */
 
+void handle(char *file);
 void lines_to_array(char *line, char **copy);
 void replace_emptylines(char *buff, char **copy);
 void initialize_buffer(char *s, int size);
@@ -94,7 +97,7 @@ void free_dlistint(stack_t *head);
 	} while (0)
 
 #define MALLOC_ERROR1(BUFF) \
-        do {\
-        fprintf(stderr, "Error: malloc failed");\
-        exit(EXIT_FAILURE);\
-        } while (0)
+	do {\
+	fprintf(stderr, "Error: malloc failed");\
+	exit(EXIT_FAILURE);\
+	} while (0)
