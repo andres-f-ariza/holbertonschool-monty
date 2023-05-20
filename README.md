@@ -5,10 +5,14 @@
 
 
 # AUTHORS.
-## Andrés Felipe Ariza Ardila
-- Git: https://github.com/andres-f-ariza
+## Alejandro Pineda Sánchez
+- Git: https://github.com/Apinedas
 - Twitter: https://twitter.com/Apsanchez2549
 - Linkedin:
+## Carlos Andres Pardo Rodriguez
+- Git: https://github.com/ANDRES3021
+- Twitter: https://twitter.com/CarlosA54648157
+- Linkedin: https://www.linkedin.com/in/carlos-andres-pardo-rodriguez-8bbb90202/
 
 # Learning Objectives
 At the end of this project, you are expected to be able to explain to anyone , without the help of Google :
