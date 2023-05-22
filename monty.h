@@ -105,19 +105,19 @@ stack_t *add_dnodeint_end(stack_t **head, const int n);
 int delete_dnodeint_at_index(stack_t **head, unsigned int index);
 void free_dlistint(stack_t *head);
 void (*getopcode_fun(char *opcode))(stack_t **, unsigned int);
-void op_push(stack_t **stack, unsigned int line_number);
-void op_pall(stack_t **stack, unsigned int line_number);
-void op_pint(stack_t **stack, unsigned int line_number);
-void op_pop(stack_t **stack, unsigned int line_number);
-void op_swap(stack_t **stack, unsigned int line_number);
-void op_add(stack_t **stack, unsigned int line_number);
-void op_nop(stack_t **stack, unsigned int line_number);
-void op_sub(stack_t **stack, unsigned int line_number);
-void op_div(stack_t **stack, unsigned int line_number);
-void op_mul(stack_t **stack, unsigned int line_number);
-void op_mod(stack_t **stack, unsigned int line_number);
-void op_pchar(stack_t **stack, unsigned int line_number);
-void op_pstr(stack_t **stack, unsigned int line_number);
+void push(stack_t **stack, unsigned int line_number);
+void pall(stack_t **stack, unsigned int line_number);
+void pint(stack_t **stack, unsigned int line_number);
+void pop(stack_t **stack, unsigned int line_number);
+void swap(stack_t **stack, unsigned int line_number);
+void add(stack_t **stack, unsigned int line_number);
+void nop(stack_t **stack, unsigned int line_number);
+void sub(stack_t **stack, unsigned int line_number);
+void div(stack_t **stack, unsigned int line_number);
+void mul(stack_t **stack, unsigned int line_number);
+void mod(stack_t **stack, unsigned int line_number);
+void pchar(stack_t **stack, unsigned int line_number);
+void pstr(stack_t **stack, unsigned int line_number);
 
 /** macros **/
 

@@ -10,20 +10,20 @@ void (*getopcode_fun(char *opcode))(stack_t **, unsigned int)
 {
 	int i = 0;
 	instruction_t made_opcodes[] = {
-		{"push", op_push},
-		{"pall", op_pall},
-		{"pint", op_pint},
-		{"pop", op_pop},
-		{"swap", op_swap},
-		{"add", op_add},
-		{"nop", op_nop},
-		{"sub", op_sub},
-		{"div", op_div},
-		{"mul", op_mul},
-		{"mod", op_mod},
-		{"#", op_nop},
-		{"pchar", op_pchar},
-		{"pstr", op_pstr}
+		{"push", push},
+		{"pall", pall},
+		{"pint", pint},
+		{"pop", pop},
+		{"swap", swap},
+		{"add", add},
+		{"nop", nop},
+		{"sub", sub},
+		{"div", div},
+		{"mul", mul},
+		{"mod", mod},
+		{"#", nop},
+		{"pchar", pchar},
+		{"pstr", pstr}
 	};
 
 	while (i <= 13)
