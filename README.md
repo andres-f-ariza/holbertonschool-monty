@@ -1,5 +1,5 @@
 # Monty Recreation
-#### Hi! This repo is a recreation of the Monty interpreter, made for Holberton school project 
+#### Hi! This repository is a recreation of the Monty interpreter, made for Holberton school project 
 
 ------------
 
