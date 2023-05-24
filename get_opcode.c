@@ -18,7 +18,7 @@ void (*getopcode_fun(char *opcode))(stack_t **, unsigned int)
 		{"add", add},
 		{"nop", nop},
 		{"sub", sub},
-		{"div", div},
+		{"div", op_div},
 		{"mul", mul},
 		{"mod", mod},
 		{"#", nop},
